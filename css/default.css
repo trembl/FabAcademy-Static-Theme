@@ -1,0 +1,447 @@
+
+/* Begin Typography & Colors */
+body {
+  font-size: 62.5%; /* Resets 1em to 10px */
+  /* font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif; */
+  font-family: ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #333;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+#page {
+  text-align: left;
+  margin: 20px auto;
+  padding: 0;
+  width: 860px;
+  font-size: 1.4em; /* general fontsize multiplicator */
+}
+
+#header {
+  margin: 0 0 0 1px;
+  padding: 0;
+  height: 200px;
+  width: 860px;
+  text-align: left;
+}
+
+#trembl {
+}
+
+.narrowcolumn {
+  float: left;
+  padding-bottom: 20px;
+  margin: 0;
+  width: 600px;
+}
+
+
+.narrowcolumn .entry {
+  line-height: 1.5em;
+  padding-bottom: 1em;
+}
+
+.narrowcolumn .postmetadata {
+  text-align: left;
+  /* font-family: "Menlo", Verdana, Arial, Helvetica, sans-serif; */
+}
+
+.alt {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#footer {
+  border: none;
+  /* font-family: "Menlo", Verdana, Arial, Helvetica, sans-serif; */
+}
+
+small {
+  /* font-family: Arial, Helvetica, Sans-Serif; */
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, #header {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-weight: bold;
+}
+
+#header #title {
+  margin: 0;
+  font-size: 8em;
+  font-weight: normal;
+}
+
+#header #description {
+  font-size: 1.2em;
+  color: #ccc;
+  text-align: center;
+}
+
+#header #searchform {
+  display: inline;
+}
+
+#header #searchform #searchinput {
+  width: 600px;
+  padding: 0;
+  margin: 15px 0;
+  font-size: 1em;
+  color: #40f;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-weight: bold;
+  /* border-radius: 150px;
+  border: #40f solid 200px;
+  z-index: -100; */
+}
+#header #searchform #searchsubmit {
+  margin-left: 70px;
+}
+
+
+h2 {
+  font-size: 2.0em;
+}
+
+h3 {
+  font-size: 1.3em;
+  padding: 0;
+  margin: 30px 0 0;
+}
+
+
+/* Links */
+
+a, a:visited {
+  color: #40f;
+  background: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  background: #40f;
+  text-decoration: none;
+}
+a:active {
+  color: #40f;
+  background: #40f;
+}
+
+/* End Links */
+
+
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+  color: #777;
+}
+
+code {
+  font: 1.1em 'Courier New', Courier, Fixed;
+}
+
+acronym, abbr, span.caps {
+  font-size: 0.9em;
+  letter-spacing: .07em;
+}
+
+
+
+
+/* Begin Structure */
+
+
+
+
+.post {
+  margin: 0 0 40px;
+}
+
+.post hr {
+  display: block;
+}
+
+.post .id {
+  width: 55px;
+  margin-left: -60px;
+  margin-right: 5px;
+  text-align: right;
+  float: left;
+}
+
+.narrowcolumn .postmetadata {
+  padding-top: 5px;
+}
+
+.postmetadata {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+#footer {
+  padding: 0;
+  margin: 0 auto;
+  width: 860px;
+  clear: both;
+  font-size: 1.2em;
+  color: #ccc;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+
+}
+
+/* End Structure */
+
+
+
+
+
+/* Begin Lists
+
+  Special stylized non-IE bullets
+  Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+  margin-left: 0px;
+  padding: 0 0 0 30px;
+  list-style: none;
+  padding-left: 10px;
+  text-indent: -10px;
+}
+
+html>body .entry li {
+  margin: 7px 0 8px 10px;
+}
+
+
+
+.entry ol {
+  padding: 0 0 0 35px;
+  margin: 0;
+}
+
+.entry ol li {
+  margin: 0;
+  padding: 0;
+}
+
+.postmetadata ul, .postmetadata li {
+  display: inline;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+#sidebar ul, #sidebar ul ol {
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar ul li {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  list-style-type: none;
+  list-style-image: none;
+  margin-bottom: 15px;
+}
+
+#sidebar ul p, #sidebar ul select {
+  margin: 5px 0 8px;
+}
+
+#sidebar ul ul, #sidebar ul ol {
+  margin: 5px 0 0 0px;
+}
+
+#sidebar ul ul ul, #sidebar ul ol {
+  margin: 0 0 0 0px;
+}
+
+ol li, #sidebar ul ol li {
+  list-style: decimal outside;
+}
+
+#sidebar ul ul li, #sidebar ul ol li {
+  margin: 3px 0 0;
+  padding: 0;
+}
+/* End Entry Lists */
+
+
+
+
+
+/* Begin Sidebar */
+#sidebar {
+  padding: 23px 0 10px 0;
+  margin-left: 675px;
+  width: 190px;
+}
+
+#sidebar .id {
+  width: 47px;
+  margin-left: -50px;
+  margin-right: 3px;
+  text-align: right;
+  float: left;
+}
+
+/* End Sidebar */
+
+
+
+
+
+
+
+
+hr {
+  display: none;
+}
+
+a img {
+  border: none;
+}
+
+
+/* Related Posts */
+
+.related {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  padding-top:10px;
+}
+.related a, .related a:visited  {
+  color: #f00;
+}
+
+.related a:hover {
+  color: #fff;
+  background: #f00
+}
+
+.related a:active {
+  color: #f00;
+  background: #f00
+}
+
+
+.tags {
+  font-family: "Menlo", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  line-height: 2em;
+}
+.narrowcolumn .tags {
+  padding-bottom: 5em;
+}
+.tags a, .tags a:visited {
+  color: #09f;
+  background: #fff;
+  padding: 2px 8px 2px 4px;
+  border: #09f 1px solid;
+  border-radius: 3px 15px 15px 3px;
+}
+.tags a:hover {
+  color: #fff;
+  background: #f0f;
+}
+.tags a:active {
+  color: #fff;
+  background: #07c;
+}
+
+#sidebar .tags {
+  padding-top: 2px;
+}
+.menlo {
+  font-family: "Menlo", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navigation {
+  font-size: 2em;
+}
+
+/* End Various Tags & Classes*/
+
+
+
+
+
+.bold {
+  font-weight: bold;
+}
+
+/* colors */
+
+.gray   { color: #ccc; }
+.red   { color: #f00; }
+.brown   { color: #963; }
+.blue   { color: #00f; }
+.green   { color: #0f0; }
+.magenta   { color: #f0f; }
+
+
+.edit a, .edit a:visited  {
+  color: #fff;
+}
+
+.edit a:hover {
+  color: #fff;
+  background: #f00;
+}
+.edit a:active {
+  color: #f00;
+  background: #0f0;
+}
+
+
+.helvetica {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+}
+
+
+/* highlight.js */
+code .class,
+code .literal,
+code .titlename {
+  color: #3465a4;
+}
+code .comment {
+  color: #4e9a06;
+}
+code .keyword {
+  color: #204187;
+  font-weight: bold;
+}
+code .escape,
+code .symbol,
+code .escape,
+code .tag {
+  color: #a40000;
+}
+code .value,
+code .preprocessor,
+code .method,
+code .javascript {
+  color: #2e3436;
+}
+code .string,
+code .regexp {
+  color: #8f5902;
+}
+code .params,
+code .attribute,
+code .number {
+  color: #5c3566;
+}
+
+
+.update {
+  font-style: italic;
+  font-size: 0.8em;
+}
