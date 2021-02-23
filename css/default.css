@@ -400,46 +400,10 @@ a img {
 }
 
 
-.helvetica {
-  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-}
 
-
-/* highlight.js */
-code .class,
-code .literal,
-code .titlename {
-  color: #3465a4;
+.body img {
+  width: 100px;
 }
-code .comment {
-  color: #4e9a06;
-}
-code .keyword {
-  color: #204187;
-  font-weight: bold;
-}
-code .escape,
-code .symbol,
-code .escape,
-code .tag {
-  color: #a40000;
-}
-code .value,
-code .preprocessor,
-code .method,
-code .javascript {
-  color: #2e3436;
-}
-code .string,
-code .regexp {
-  color: #8f5902;
-}
-code .params,
-code .attribute,
-code .number {
-  color: #5c3566;
-}
-
 
 .update {
   font-style: italic;

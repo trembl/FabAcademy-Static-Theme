@@ -4,15 +4,12 @@
 
     <h1><?php the_title(); edit_post_link('*'); ?></h1>
 
-    <div class="submenu">
-<?php get_sidebar(); ?>
-    </div>
+    <article class="home">
 
-    <article>
 <?php the_markdown_content(); ?>
 
-<?php endwhile; endif; ?>
 
+<?php endwhile; endif; ?>
     </article>
 
 <?php get_footer(); ?>
