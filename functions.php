@@ -50,7 +50,16 @@ function h_to_link($h) {
   return $h;
 }
 
+// clean image inserts
+add_filter( 'get_image_tag_class', 'change_image_class' );
+function change_image_class($class) {
+  return "large";
+}
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
+function remove_width_attribute($html) {
+  return preg_replace( '/(width|height|alt)="\d*"\s/', "", $html );
+}
 
 
 
