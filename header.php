@@ -49,6 +49,6 @@
         19
         <a href="<?php echo get_site_url(); ?>/student-agreement/">Student Agreement</a>
         FabAcademy 2021<a href="http://fabacademy.org/2021/">↗︎</a>
-        FabLab Kamakura<a href="https://www.fablabkamakura.com">↗︎</a>
+        <a href="http://127.0.0.1/fab/fablab-kamakura/">FabLab Kamakura</a><a href="https://www.fablabkamakura.com">↗︎</a>
       </div>
     </header>
