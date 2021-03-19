@@ -27,21 +27,34 @@ $Extra = new ParsedownExtra();
 function the_markdown_content() {
   global $Parsedown;
   global $Extra;
+  $isCodeBlock = false;
   $content = get_the_content();
   $a = explode("\n", $content);
   foreach($a as &$line) {
-    if (trim($line)[0] == "#") {
-      $link = h_to_link($line);
-      $h = rtrim($line, " \r\n");
-      $line = "$h {#$link}\r\n";
+
+    if (substr(trim($line), 0, 3)  == '```') {
+      $isCodeBlock = !$isCodeBlock;
     }
+
+    if (!$isCodeBlock) {
+      if (trim($line)[0] == "#") {
+        $link = h_to_link($line);
+        $h = rtrim($line, " \r\n");
+        $line = "$h {#$link}\r\n";
+      }
+    }
+
   }
   $content = implode("\n", $a);
   $content = $Extra->text($content);
   echo $content;
+  // echo apply_filters( 'the_content', $content);
+
 }
 
 
+
+// header to link
 function h_to_link($h) {
   $h = trim($h, "# \r\n");
   $h = strtolower($h);
@@ -69,6 +82,38 @@ function remove_width_attribute($html) {
 // Run from within WP directory
 /* wp media regenerate --yes */
 
+
+function prepare_files($atts = [], $content = null) {
+
+  $a = shortcode_atts( array(
+    'week' => false
+  ), $atts );
+  $week = $a['week'];
+
+  if (!$week) return 'Please enter Week';
+
+
+
+  $dir = ABSPATH . 'files/' . $week . '/';
+  if (is_dir($dir)) $files = scandir($dir);
+
+  //return $dir;
+  $html = "";
+  if (empty($files)) {
+    return "No files.";
+  } else {
+    $html .= "<ul>\n";
+    foreach ($files as $file) {
+
+      if ($file[0] == '.') continue;
+      $size = round(filesize($dir . $file) / 1024) . "K";
+      $html .= "<li><a href=''>$file</a> ($size)</li>\n";
+    }
+    $html .= "</ul>\n";
+  }
+  echo $html;
+}
+add_shortcode('display_files', 'prepare_files');
 
 
 

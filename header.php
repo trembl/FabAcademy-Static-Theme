@@ -31,10 +31,10 @@
         <a href="<?php echo get_site_url(); ?>/weekly/w1/">1</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w2/">2</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w3/">3</a>
-        <a href="<?php echo get_site_url(); ?>/weekly/w4/">4 - Electronics Production: "Shiny & Smooth!"</a>
-        5
-        6
-        7
+        <a href="<?php echo get_site_url(); ?>/weekly/w4/">4</a>
+        <a href="<?php echo get_site_url(); ?>/weekly/w5/">5</a>
+        <a href="<?php echo get_site_url(); ?>/weekly/w6/">6</a>
+        <a href="<?php echo get_site_url(); ?>/weekly/w7/">7 - Computer-Controlled Machining</a>
         8
         9
         10

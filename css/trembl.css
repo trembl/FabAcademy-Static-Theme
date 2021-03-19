@@ -35,7 +35,6 @@ header {
 }
 .menu a {
   margin-bottom: 0.75em;
-  content: "a";
 }
 
 .overline {
@@ -124,24 +123,26 @@ a:hover {
 }
 a:active {
   color: #fff;
-  background: #f3f;
+  background: #f0f;
   text-decoration: none;
 }
-
+/*
 article a, article a:visited {
   color: #33f;
   text-decoration: none;
   cursor: pointer;
 }
 article a:hover {
-  color: #33f;
-  text-decoration: underline;
+  color: #fff;
+  background: #33f;
+  text-decoration: none;
 }
 article a:active {
   color: #fff;
   background: #33f;
   text-decoration: none;
 }
+*/
 /*
 #title a {
   color: #33f;
@@ -254,22 +255,44 @@ article.home {
 }
 
 
-.submenu a {
-  font-weight: 400;
-  line-height: 1em;
-  font-size: 0.9em;
-  padding-left: 1em;
-}
+
 
 .submenu a.submenu2::before {
-   content: "⇣ ";
+   /** content: "⇣ "; **/
+}
+
+.submenu {
+  word-break: break-all;
 }
 
 .submenu a.submenu1, .submenu a.submenu2 {
-  font-weight: 500;
+  word-break: break-all;
+  font-weight: 700;
   line-height: 1.5em;
   font-size: 1em;
-  padding-left: 0em;
+  margin-left: 0em;
+}
+
+.submenu a.submenu3, .submenu a.submenu4 {
+  word-break: break-all;
+  font-weight: 500;
+  line-height: 0.9em;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.submenu a.submenu4, .submenu a.submenu5, .submenu a.submenu6 {
+  word-break: break-all;
+  font-weight: 400;
+  line-height: 0.9em;
+  font-size: 0.8em;
+  margin-left: 2em;
+}
+
+
+.assignment {
+  line-height: 1em;
+  font-size: 0.5em;
 }
 
 
@@ -292,7 +315,8 @@ a:not([href]), a:not([href]):visited, a:not([href]):hover, a:not([href]):active 
 
 
 article img {
-  width: 100%;
+  width: 98%;
+  margin: 2px 0;
 }
 
 article img.medium {
@@ -301,6 +325,9 @@ article img.medium {
 
 article img.small {
   width: 49%;
+}
+article img.smaller {
+  width: 32%;
 }
 article img.mini {
   width: 24.5%;
@@ -324,26 +351,62 @@ article img.mini {
 }
 
 blockquote {
-  font-style: italic;
-  font-weight: normal;
-  background: #fafafa;
-  border-radius: 0.5em;
-  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
   font-size: 0.75em;
-  padding: 10px;
 }
 
 aside {
-  background: #fff;
-  color: #333;
-  font-weight: 400;
-  margin: 10vh 10vh;
+  background: #00f;
+  color: #fff;
+  font-weight: 500;
+  margin: 10em 0;
   padding: 1em;
-  border: 0.5em solid #00f;
+  font-size: 1em;
+  /* border: 1px solid #333; */
 }
 
-aside.failure, aside.danger {
-  border: 0.5em solid #f00;
+aside:before {
+}
+
+aside.danger {
+  background: #f00;
+}
+
+aside.problem {
+  color: #f0f;
+  font-weight: 400;
+  margin: 3em 0;
+  padding: 1em;
+  background: #fff;
+  border-radius: 2em;
+  border: 0.5em solid #f0f;
+}
+
+aside.problem:before  {
+  content: "PROBLEM: ";
+}
+
+aside.challenge {
+  color: #ff0;
+  font-weight: 400;
+  margin: 3em 0;
+  padding: 1em;
+  background: #333;
+  border-radius: 2em;
+  border: 0.5em solid #ff0;
+}
+
+aside.challenge:before  {
+  content: "CHALLENGE: ";
+}
+
+
+
+
+aside.failure {
+  background: #f70;
 }
 
 aside.failure:before  {
@@ -381,3 +444,8 @@ aside::first-letter {
   text-decoration: none;
 }
 */
+
+table {
+  font-size: 0.9em;
+  font-weight: 400;
+}

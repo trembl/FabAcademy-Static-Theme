@@ -7,9 +7,8 @@
     <article class="home">
 
 <?php the_markdown_content(); ?>
-
+    </article>
 
 <?php endwhile; endif; ?>
-    </article>
 
 <?php get_footer(); ?>
