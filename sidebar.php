@@ -1,12 +1,10 @@
+<br />
 <?php
 
 global $Parsedown;
 global $Extra;
 
 while( have_rows('sidebar') ) : the_row();
-
-
-
   $content = $Extra->text(get_sub_field('textfield'));
   echo $content;
 endwhile;

@@ -3,16 +3,16 @@
       <div>
         <a href="<?php echo get_site_url(); ?>/">Index ↰</a>
         <a href="<?php echo get_site_url(); ?>/about/">About Georg Tremmel</a>
-        <a href="<?php echo get_site_url(); ?>/final/">Final Project</a>
+        <a href="<?php echo get_site_url(); ?>/final/">Final Project Developments</a>
         <a href="<?php echo get_site_url(); ?>/weekly/">Week</a>
-        <a href="<?php echo get_site_url(); ?>/weekly/w1/">1</a>
+        <a href="<?php echo get_site_url(); ?>/weekly/w1/">1 - </a>
         <a href="<?php echo get_site_url(); ?>/weekly/w2/">2</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w3/">3</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w4/">4</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w5/">5</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w6/">6</a>
-        <a href="<?php echo get_site_url(); ?>/weekly/w7/">7 - Computer-Controlled Machining</a>
-        8
+        <a href="<?php echo get_site_url(); ?>/weekly/w7/">7</a>
+        <a href="<?php echo get_site_url(); ?>/weekly/w8/">8 - Embedded Programming - "Cheap and Cheerful"</a>
         9
         10
         11

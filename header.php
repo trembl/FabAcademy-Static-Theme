@@ -3,6 +3,7 @@
 <head>
   <title>FabAcademy 2021 - Georg Tremmel - FabLab Kamakura</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" href="<?php echo get_site_url(); ?>/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/mhw5cxw.css">
@@ -24,7 +25,7 @@
       <div class="overline">
         <a href="<?php echo get_site_url(); ?>/">~/Index</a>
         <a href="<?php echo get_site_url(); ?>/about/">About Georg Tremmel</a>
-        <a href="<?php echo get_site_url(); ?>/final/">Final Project</a>
+        <a href="<?php echo get_site_url(); ?>/final/">Final Project Developments</a>
       </div>
       <div class="overline2">
         <a href="<?php echo get_site_url(); ?>/weekly/">Week</a>
@@ -34,8 +35,8 @@
         <a href="<?php echo get_site_url(); ?>/weekly/w4/">4</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w5/">5</a>
         <a href="<?php echo get_site_url(); ?>/weekly/w6/">6</a>
-        <a href="<?php echo get_site_url(); ?>/weekly/w7/">7 - Computer-Controlled Machining</a>
-        8
+        <a href="<?php echo get_site_url(); ?>/weekly/w7/">7</a>
+        <a href="<?php echo get_site_url(); ?>/weekly/w8/">8 - Embedded Programming - "Cheap and Cheerful"</a>
         9
         10
         11

@@ -9,8 +9,8 @@
     </div>
 
     <article>
-<?php // the_markdown_content(); ?>
-<?php the_content(); ?>
+<?php the_markdown_content(); ?>
+<?php /*the_content();*/ ?>
     </article>
 
 <?php endwhile; endif; ?>

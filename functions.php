@@ -6,6 +6,12 @@
 // remove_filter( 'the_content', 'wpautop' );
 // remove_filter( 'the_excerpt', 'wpautop' );
 
+// Excerpts for Pages
+add_post_type_support( 'page', 'excerpt' );
+
+// Feature Images for Posts
+add_theme_support( 'post-thumbnails' );
+
 // Disable Autosave
 function disable_autosave() {
   wp_deregister_script('autosave');
@@ -48,8 +54,6 @@ function the_markdown_content() {
   $content = implode("\n", $a);
   $content = $Extra->text($content);
   echo $content;
-  // echo apply_filters( 'the_content', $content);
-
 }
 
 
@@ -91,8 +95,6 @@ function prepare_files($atts = [], $content = null) {
   $week = $a['week'];
 
   if (!$week) return 'Please enter Week';
-
-
 
   $dir = ABSPATH . 'files/' . $week . '/';
   if (is_dir($dir)) $files = scandir($dir);
