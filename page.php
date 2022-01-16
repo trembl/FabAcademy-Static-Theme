@@ -4,9 +4,13 @@
 
     <h1><?php the_title(); edit_post_link(' 𝓔𝓭𝓲𝓽'); ?></h1>
 
-    <article class="home">
+    <div class="submenu">
+<?php get_sidebar(); ?>
+    </div>
 
+    <article>
 <?php the_markdown_content(); ?>
+<?php prepare_files(); ?>
     </article>
 
 <?php endwhile; endif; ?>

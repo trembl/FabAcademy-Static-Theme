@@ -13,10 +13,12 @@ add_post_type_support( 'page', 'excerpt' );
 add_theme_support( 'post-thumbnails' );
 
 // Disable Autosave
+/*
 function disable_autosave() {
   wp_deregister_script('autosave');
 }
-// add_action('wp_print_scripts', 'disable_autosave');
+add_action('wp_print_scripts', 'disable_autosave');
+*/
 
 // Set JPEG Quality
 function set_jpeg_quality() {
@@ -70,7 +72,7 @@ function h_to_link($h) {
 // clean image inserts
 add_filter( 'get_image_tag_class', 'change_image_class' );
 function change_image_class($class) {
-  return "large";
+  return "medium";
 }
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
@@ -87,36 +89,43 @@ function remove_width_attribute($html) {
 /* wp media regenerate --yes */
 
 
-function prepare_files($atts = [], $content = null) {
+function prepare_files() {
+  if (empty(get_field('week_id'))) return;
 
-  $a = shortcode_atts( array(
-    'week' => false
-  ), $atts );
-  $week = $a['week'];
+  if (get_field('week_id') == 'final') {
+    $week = 'final';
+  } else {
+    $week = 'w' . get_field('week_id');
+  }
 
-  if (!$week) return 'Please enter Week';
 
   $dir = ABSPATH . 'files/' . $week . '/';
   if (is_dir($dir)) $files = scandir($dir);
 
-  //return $dir;
   $html = "";
-  if (empty($files)) {
-    return "No files.";
+
+  if (empty($files) OR count($files)<=2) {
+    // return "No files.";
   } else {
+    $html .= "<aside class='files'>\n";
     $html .= "<ul>\n";
     foreach ($files as $file) {
-
+      if (is_dir($dir.$file)) continue;
       if ($file[0] == '.') continue;
-      $size = round(filesize($dir . $file) / 1024) . "K";
-      $html .= "<li><a href=''>$file</a> ($size)</li>\n";
+      $url = get_bloginfo('url') . '/files/' . $week . '/'. $file;
+      $size = round(filesize($dir . $file) / 1024);
+      $sizeString = $size . "K";
+      if ($size < 2) {
+        $size = filesize($dir . $file);
+        $sizeString = $size . "B";
+      }
+
+      $html .= "<li><a href='$url'>$file</a> <span class='gray'>($sizeString)</span></li>\n";
     }
     $html .= "</ul>\n";
+    $html .= "</aside>\n";
   }
   echo $html;
 }
-add_shortcode('display_files', 'prepare_files');
-
-
 
 ?>

@@ -13,7 +13,7 @@ html {
 
 article, .submenu {
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 article.text {
@@ -81,6 +81,22 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h2, h3, h4 {
+  padding-top: 1em;
+}
+
 
 
 
@@ -105,10 +121,21 @@ h1 {
   font-style: italic;
 }
 
+.small {
+  font-size: 0.75;
+}
+
+.smaller {
+  font-size: 0.5;
+}
+
 .gray {
   color: #666;
 }
 
+.lightgray {
+  color: #ccc;
+}
 
 a, a:visited {
   color: #33f;
@@ -121,11 +148,13 @@ a:hover {
   background: #33f;
   text-decoration: none;
 }
-a:active {
+
+a:active, a.active {
   color: #fff;
   background: #f0f;
   text-decoration: none;
 }
+
 /*
 article a, article a:visited {
   color: #33f;
@@ -158,6 +187,7 @@ article a:active {
   text-decoration: underline;
 }
 */
+
 
 sup {
   /* font-weight: 700; */
@@ -206,14 +236,29 @@ select {
 
 
 figcaption, .byline {
-  font-size: 0.75em;
-  font-weight: 400;
-  text-align: center;
-  padding-bottom: 1em;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 2em;
+  padding-top: 5px;
+  text-align: left;
+  display: block;
+  clear: both;
 }
+
+
+
+figcaption span {
+  background: #00f;
+  color: #fff;
+  padding: 0 0.25em;
+}
+
 .center {
   text-align: center;
 }
+
 
 table {
   width: 100%;
@@ -230,60 +275,119 @@ tr, td {
   text-align: center;
 }
 
-article {
-  width: 75%;
-  float: left;
-}
-
-article.home {
-  width: 100%;
-  float: none;
-}
-
 
 .submenu {
-  width: 23%;
+  width: 33.3%;
   float: right;
+  padding: 1em;
+  margin: 1em 0 2em 1em;
+  background: #f6f6f6;
+  border-left: 10px solid #eee;
+  overflow-wrap: break-word;
+}
+
+.eval {
+  background: #f00;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 1em;
+  border-radius: 1
+}
+
+.eval a {
+  background: #f00;
+  color: #fff;
+}
+
+.eval a:hover {
+  background: #fff;
+  color: #f00;
+}
+
+.eval a:active {
+  background: #ccc;
+  color: #f00;
+}
+
+
+button.obvious {
+  font-size: 4em;
+  font-family: neue-haas-grotesk-text, 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  background-color: #aaa;
+  color: #000;
+  border: 15px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #666;
+}
+button.obvious:hover {
+  background-color: #ff0;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 15px 15px 15px #666;
+}
+button.obvious:active {
+  background-color: #f0f;
+  color: #fff;
+  cursor: progress;
+  box-shadow: 0 0 0 #666;
+
 }
 
 
 
-
-
-
-
+/* Submenu  */
 .submenu a {
 
 }
 
-
-
-.submenu a.submenu1, .submenu a.submenu2 {
+.submenu a.submenu1 {
   font-weight: 700;
   line-height: 1.5em;
   font-size: 1em;
   margin-left: 0em;
 }
 
-.submenu a.submenu3, .submenu a.submenu4 {
-  font-weight: 400;
-  line-height: 0.7em;
-  font-size: 0.9em;
-  margin-left: 0.5em;
+.submenu a.submenu2 {
+  font-weight: 700;
+  line-height: 1.5em;
+  font-size: 1em;
+  margin-left: 0em;
 }
 
-.submenu a.submenu4, .submenu a.submenu5, .submenu a.submenu6 {
+.submenu a.submenu3 {
+  font-weight: 700;
+  filter: hue-rotate(70deg);
+  line-height: 1.5em;
+  font-size: 1em;
+  margin-left: 0em;
+}
+
+.submenu a.submenu4 {
   font-weight: 400;
+  filter: hue-rotate(70deg);
+  line-height: 0.7em;
+  font-size: 1em;
+  margin-left: 0em;
+}
+
+.submenu a.submenu5 {
+  font-weight: 400;
+  filter: hue-rotate(70deg);
+  line-height: 0.6em;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.submenu a.submenu6 {
+  font-weight: 400;
+  filter: hue-rotate(70deg);
   line-height: 0.6em;
   font-size: 0.8em;
   margin-left: 1em;
 }
 
 
-.assignment {
-  line-height: 1em;
-  font-size: 0.5em;
-}
 
 
 
@@ -303,13 +407,17 @@ a:not([href]), a:not([href]):visited, a:not([href]):hover, a:not([href]):active 
 
 
 
+/* Image Sizes */
 
 article img {
   width: 100%;
-  margin-right: -4px;
 }
 article img.medium {
   width: 75%;
+}
+article img.small, article img.smaller, article img.mini {
+  display: block;
+  float: left;
 }
 article img.small {
   width: 50%;
@@ -319,6 +427,19 @@ article img.smaller {
 }
 article img.mini {
   width: 25%;
+}
+article img.clear {
+  display: inline-block;
+  float: none;
+}
+article img.grayscale {
+  filter: grayscale(1);
+}
+article img.grayscale2 {
+  filter: grayscale(0.5);
+}
+article img.grayscale:hover, article img.grayscale2:hover {
+  filter: grayscale(0);
 }
 
 
@@ -354,17 +475,29 @@ article img.mini {
 }
 
 blockquote {
-  padding: 0;
-  margin: 0;
+  background: #eee;
+  color: #555;
   font-weight: 500;
+  font-style: oblique;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  font-size: 1.0em;
+  border-left: 10px solid #ddd;
+}
 
+blockquote cite {
+  font-style: normal;
+  display: block;
+  font-size: 0.9em;
+  text-align: right;
+  padding-top: 1em;
 }
 
 aside {
   background: #00f;
   color: #fff;
   font-weight: 500;
-  margin: 4em 0;
+  margin: 1em 0;
   padding: 1em;
   font-size: 1.1em;
   border-left: 10px solid #77f;
@@ -393,6 +526,35 @@ aside.solution {
   border-left: 10px solid #cc0;
 }
 
+aside.observation {
+  background: #ff7f00;
+  border-left: 10px solid #FFA042;
+}
+aside.observation::selection {
+  background: #fff;
+  opacity: 0;
+  color: #ff7f00;
+}
+
+aside.  {
+  background: #ffff00;
+  border-left: 10px solid #ffffa1;
+}
+
+
+.no-margin {
+  margin: 0;
+}
+
+/* Prism CSS Overrides */
+pre[class*="language-"], code[class*="language-"] {
+  margin-top: 0;
+}
+code[class*="language-"] {
+  border-left: solid 10px #eee;
+}
+
+
 aside.solution:before  {
   content: "SOLUTION: ";
 }
@@ -407,21 +569,35 @@ aside.challenge:before  {
   content: "CHALLENGE: ";
 }
 
+aside.files  {
+  color: #000;
+  background: #fff;
+  border-left: 10px solid #ddd;
+  background-image: repeating-linear-gradient(-45deg,
+      transparent 0 5px,
+      #eee 5px 10px);
+}
+
+
 
 
 
 aside.failure {
+  color: #fff;
   background: #f70;
+  border-left: 10px solid #d14c00;;
 }
+
 
 aside.failure:before  {
-
+  content: "𝓕𝓪𝓲𝓵𝓾𝓻𝓮: ";
 }
 
-.submenu ul, .submenu li  {
+.submenu ul, .submenu li, .submenu p  {
   padding: 0;
   margin: 0;
 }
+
 
 
 /*
@@ -459,11 +635,56 @@ table {
   font-weight: 400;
 }
 
+hr {
+  border-top: 5px solid #00f;
+}
+
+del {
+ background: #eee;
+ color: #666;
+}
+
+
+
+html.weekly {
+  background-color: #00f;
+  color: #fff;
+}
+
+html.weekly article a {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+html.weekly a, html.weekly a:visited {
+  color: #00f;
+  background: #fff;
+}
+
+html.weekly a:hover {
+  color: #fff;
+  background: #f0f;
+}
+html.weekly a:active {
+  color: #000;
+  background: #0f0;
+}
+
+
+
 @media only screen and (max-width: 768px) {
-  article, .submenu {
+  article {
     width: 100%;
     float: none;
   }
+  .submenu {
+    width: 100%;
+    box-sizing: border-box;
+    float: none;
+    padding: 1em;
+    margin: 0em;
+  }
+
 
   article img, article img.large, article img.medium, article img.small, article img.smaller, article img.mini {
     width: 100%;
